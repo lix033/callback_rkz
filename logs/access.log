@@ -1,0 +1,7 @@
+::1 - - [05/Nov/2025:08:18:57 +0000] "POST /callbacks/debit HTTP/1.1" 200 61 "-" "curl/8.13.0"
+::1 - - [05/Nov/2025:08:18:57 +0000] "GET /callbacks/debit HTTP/1.1" 405 54 "-" "curl/8.13.0"
+::1 - - [05/Nov/2025:08:19:36 +0000] "GET /callbacks/debit HTTP/1.1" 405 54 "-" "curl/8.13.0"
+::1 - - [05/Nov/2025:08:20:00 +0000] "POST /callbacks/debit HTTP/1.1" 200 61 "-" "curl/8.13.0"
+::1 - - [05/Nov/2025:08:21:31 +0000] "POST /callbacks/debit HTTP/1.1" 200 61 "-" "curl/8.13.0"
+::1 - - [05/Nov/2025:08:22:26 +0000] "POST /callbacks/debit HTTP/1.1" 200 61 "-" "curl/8.13.0"
+::1 - - [05/Nov/2025:08:24:47 +0000] "POST /callbacks/debit HTTP/1.1" 200 61 "-" "curl/8.13.0"
