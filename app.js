@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const { mkdir, appendFile } = require("fs/promises");
 const dotenv = require("dotenv");
+const moment = require("moment");
 dotenv.config();
 
 const app = express();
@@ -25,10 +26,13 @@ const LOG_FILE = process.env.LOG_FILE || "debit_callback.log";
     try {
       await appendFile(
         path.join(LOG_DIR, LOG_FILE),
-        `[${new Date().toISOString()}] ${JSON.stringify(req.body)}\n\n`,
+        `[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${JSON.stringify(req.body)}\n\n`,
         "utf8"
       );
+
+      console.log("Payload reçu :", req.body);
       res.json({ status: "success", message: "Payload reçu et enregistré" });
+
     } catch (err) {
       console.error(err);
       res.status(500).json({ status: "error", message: "Erreur serveur" });
